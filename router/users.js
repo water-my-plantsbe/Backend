@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const userDb= require('../data/userModel.js');
-const plantDb= require('../data/plantsModel.js');
 const {authenticate, validUser ,validUserId} = require('../auth/auth.js');
 // get all the users
 router.get('/',authenticate, async (req, res) => {

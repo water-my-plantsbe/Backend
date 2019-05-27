@@ -15,7 +15,7 @@ module.exports = {
 };
 
 function find() {
-  return db('plants').select('name', 'description');
+  return db('plants').select('id','name', 'description');
 }
 function findBy(filter) {
   return db('plants').where(filter);
