@@ -21,7 +21,6 @@ for (let i = 1; i < 50; i++) {
 
 exports.seed = function(knex, Promise) {
     return knex('plants')
-    .truncate()
     .then(function(){
       return knex('users').insert([...seeds]);
     })
