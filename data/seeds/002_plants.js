@@ -65,7 +65,7 @@ for (let i = 0; i < 100; i++) {
     plant_name: getRandomPlantName(),
   });
 }
-
+ 
 exports.seed = function(knex, Promise) {
       return knex('plantbook')
       .then(function(){
