@@ -1,10 +1,10 @@
-
-const faker = require('faker');
 const plants = [
       'Amaryllis',
       'Aster',
       'Anemone',
       'Azalea',
+      'Belly',
+      'Zoba',
       'Begonia',
       'Bluebell',
       'Babys Breath',
@@ -25,7 +25,6 @@ const plants = [
       'Orchid',
       'Daffodil',
       'Primrose',
-      'Forget-Me-Not',
       'Foxglove',
       'Iris',
       'Lilac',
@@ -61,18 +60,16 @@ const getRandomPlantName = () => {
     
 
 const seeds = [];
-for (let i = 1; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
   seeds.push({
-    user_id: Math.floor(Math.random() * 50 + 1),
-    name: getRandomPlantName(),
+    plant_name: getRandomPlantName(),
   });
 }
 
 exports.seed = function(knex, Promise) {
-      return knex('plants')
-      //.truncate()
+      return knex('plantbook')
       .then(function(){
-      return knex('plants').insert([...seeds]);
+      return knex('plantbook').insert([...seeds]);
       })
 };
 

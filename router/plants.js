@@ -3,10 +3,10 @@ const router = express.Router();
 const plantDb= require('../data/plantsModel.js');
 const {validUser ,validUserId, authenticate, checkForPlantOwner, validPlantId} = require('../auth/auth.js');
 
-//getting all the plant
-router.get('/', authenticate, async (req, res)=>{
+//getting plant suggestion 
+router.get('/',async (req, res)=>{
     try{
-        await plantDb.find()
+        await plantDb.findPlants()
             .then(plant => {
                 res.status(200).json(plant) })
 

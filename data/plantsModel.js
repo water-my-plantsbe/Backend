@@ -3,6 +3,7 @@ const db = require('./dbConfig.js');
 module.exports = {
   find,
   findBy,
+  findPlants,
   findPlant,
   addPlant,
   findById,
@@ -16,6 +17,9 @@ module.exports = {
 
 function find() {
   return db('plants').select('id','name', 'description');
+}
+function findPlants() {
+  return db('plantbook').select('id','plant_name');
 }
 function findBy(filter) {
   return db('plants').where(filter);

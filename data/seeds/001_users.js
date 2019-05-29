@@ -5,7 +5,7 @@ const faker = require('faker');
 const seeds = [
   { id: 1,
     username: 'md',
-    email: 'kki@gmail',
+    email: 'kking@gmail',
     password: pass,
     phone: '347412334'
   },
