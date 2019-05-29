@@ -60,7 +60,7 @@ const getRandomPlantName = () => {
     
 
 const seeds = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 50; i++) {
   seeds.push({
     plant_name: getRandomPlantName(),
   });
