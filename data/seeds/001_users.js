@@ -3,14 +3,14 @@ const pass = bcrypt.hashSync('pass');
 const faker = require('faker');
 
 const seeds = [
-  { id: 1,
+  { id: 52 ,
     username: 'md',
     email: 'kking@gmail',
     password: pass,
     phone: '347412334'
   },
 ];
-for (let i = 1; i < 50; i++) {
+for (let i = 0; i < 50; i++) {
   seeds.push({
     username: faker.internet.userName(),
     email: faker.internet.email(),
